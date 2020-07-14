@@ -6,7 +6,7 @@ reading_frame = int(sys.argv[2])
 
 start = int(sys.argv[3])
 
-end = int(sys.argv[4])
+length = int(sys.argv[4])
 
 dna_sequence = ""
 
@@ -28,4 +28,4 @@ for i in range(reading_frame, len(dna_sequence), 3):
 		print("Breaking because end of DNA Sequence found")
 		break
 
-print(amino_acids[start:end])
+print(amino_acids[start:start+length])
