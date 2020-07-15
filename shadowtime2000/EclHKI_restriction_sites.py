@@ -18,7 +18,7 @@ dna_sequence = dna_sequence.replace("\n", "")
 
 for i in range(0, len(dna_sequence), 11):
 	if (dna_sequence[i:i+3] == restriction_site1 and dna_sequence[i+8:i+11] == restriction_site2):
-		dna_sequence.replace(dna_sequence[i:i+11], "*")
+		dna_sequence = dna_sequence.replace(dna_sequence[i:i+11], "*")
 
 fragments = dna_sequence.split("*")
 
