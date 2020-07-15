@@ -17,11 +17,12 @@ with open(genome_file, "r") as f:
 dna_sequence = dna_sequence.replace("\n", "")
 
 for i in range(0, len(dna_sequence), 11):
-	if (dna_sequence[i:i+3] == restriction_site1 and dna_sequence[i+8:i+12] == restriction_site2):
-		dna_sequence.replace(dna_sequence[i:i+12], "*")
+	if (dna_sequence[i:i+3] == restriction_site1 and dna_sequence[i+8:i+11] == restriction_site2):
+		dna_sequence.replace(dna_sequence[i:i+11], "*")
 
 fragments = dna_sequence.split("*")
 
 for i in range(len(fragments)):
 	print("Fragment ", i, " Length: ", len(fragments[i]))
+
 
