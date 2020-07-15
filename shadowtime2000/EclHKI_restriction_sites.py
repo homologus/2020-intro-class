@@ -22,7 +22,7 @@ for i in range(0, len(dna_sequence), 11):
 
 fragments = dna_sequence.split("*")
 
-for i in range(len(fragments)):
-	print("Fragment ", i, " Length: ", len(fragments[i]))
+for i in fragments:
+	print("Fragment Length: ", len(i))
 
 
