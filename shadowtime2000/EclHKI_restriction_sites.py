@@ -3,9 +3,6 @@ import sys
 restriction_site1 = "GAC"
 restriction_site2 = "GTC"
 
-restriction_site_reverse1 = "CTG"
-restriction_site_reverse2 = "CAG"
-
 genome_file = sys.argv[1]
 
 dna_sequence = ""
