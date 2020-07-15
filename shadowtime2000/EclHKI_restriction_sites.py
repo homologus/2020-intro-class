@@ -24,5 +24,4 @@ fragments = dna_sequence.split("*")
 
 for i in fragments:
 	print("Fragment Length: ", len(i))
-
-
+print("Number of fragments: ", len(fragments))
