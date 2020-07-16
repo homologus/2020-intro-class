@@ -1,3 +1,4 @@
+
 import sys
 import re
 
@@ -14,7 +15,7 @@ dna_sequence = dna_sequence.upper()
 
 pattern = ""
 
-for i in sys.argv[2]
+for i in sys.argv[2]:
 	if (i == "N"):
 		pattern = pattern + "[A|C|T|G]"
 	else:
