@@ -1,4 +1,5 @@
 import sys
+import re
 
 restriction_site1 = "GAC"
 restriction_site2 = "GTC"
@@ -12,13 +13,13 @@ with open(genome_file, "r") as f:
 		if not line[0] == ">":
 			dna_sequence = dna_sequence + line
 dna_sequence = dna_sequence.replace("\n", "")
+dna_sequence = dna_sequence.upper()
 
-for i in range(0, len(dna_sequence), 1):
-	try:
-		if (dna_sequence[i:i+3] == restriction_site1 and dna_sequence[i+8:i+11] == restriction_site2):
-			dna_sequence = dna_sequence.replace(dna_sequence[i:i+11], "*")
-	except IndexError:
-		print("Breaking because end of sequence found")
+S = re.findall("GAC[A|G|C|T][A|G|C|T][A|G|C|T][A|G|C|T][A|G|C|T]GTC", dna_sequence)
+
+for i in S:
+	dna_sequence = dna_sequence.replace(i, "*")
+
 fragments = dna_sequence.split("*")
 
 for i in fragments:
