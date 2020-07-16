@@ -1,9 +1,6 @@
 import sys
 import re
 
-restriction_site1 = "GAC"
-restriction_site2 = "GTC"
-
 genome_file = sys.argv[1]
 
 dna_sequence = ""
@@ -15,7 +12,15 @@ with open(genome_file, "r") as f:
 dna_sequence = dna_sequence.replace("\n", "")
 dna_sequence = dna_sequence.upper()
 
-S = re.findall("GAC[A|G|C|T][A|G|C|T][A|G|C|T][A|G|C|T][A|G|C|T]GTC", dna_sequence)
+pattern = ""
+
+for i in sys.argv[2]
+	if (i == "N"):
+		pattern = pattern + "[A|C|T|G]"
+	else:
+		pattern = pattern + i
+
+S = re.findall(pattern, dna_sequence)
 
 for i in S:
 	dna_sequence = dna_sequence.replace(i, "*")
