@@ -4,9 +4,9 @@ import numpy as np
 sequence1 = sys.argv[1]
 sequence2 = sys.argv[2]
 
-match = sys.argv[3]
-mismatch = sys.argv[4]
-gap = sys.argv[5]
+match = int(sys.argv[3])
+mismatch = int(sys.argv[4])
+gap = int(sys.argv[5])
 
 matrix = []
 
