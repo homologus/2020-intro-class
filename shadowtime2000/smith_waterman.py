@@ -49,6 +49,6 @@ for i in range(len(matrix)):
 				match_t = match
 			else:
 				match_t = mismatch
-			possibilities = [matrix[i-1][j-1] + match_t, matrix[i-1][j] + gap, matrix[i][j-1] + gap, 0]
-			matrix[i][j] = possibilities[np.argmax(possibilites)]
+			possible = [matrix[i-1][j-1] + match_t, matrix[i-1][j] + gap, matrix[i][j-1] + gap, 0]
+			matrix[i][j] = possible[np.argmax(possible)]
 print(matrix)
