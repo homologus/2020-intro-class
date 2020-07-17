@@ -34,7 +34,7 @@ letter_column = {"0": "-"}
 for i in range(1, len(matrix) + 1):
 	letter_row[str(i)] = sequence1[i - 1]
 	for j in range(1, len(matrix[i])):
-		letter_column[string(j)] = sequence2[j - 1]
+		letter_column[str(j)] = sequence2[j - 1]
 
 for i in range(len(matrix)):
 	for j in range(len(matrix[i])):
